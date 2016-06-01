@@ -13,9 +13,18 @@ function DatabaseService(){
         this.dbPassword = password;
         this.dbName = dbname;
     }
-
+/*
+*function readConfig
+* reads the JSON config file tha is placed under confPath
+* and initialize dbConfig-Object with content of this file
+* config file must be properly formated
+* returns true is read was successful, else returns false
+ */
     function readConfig(){
         var successful = false;
+        $.getJSON(confPath, function(result){
+            this.dbConfig = new DBConfig(result.dbURL, result.dbLoginname, result.dbPassword, result.dbName);
+        });
 
         return successful;
     }
@@ -28,6 +37,7 @@ function DatabaseService(){
     function configureDBAccess(dbconfigObj){
         var successful = false;
 
+        this.dbConfig = new DBConfig(dbconfigObj.dbURL, dbconfigObj.dbLoginname, dbconfigObj.dbPassword, dbconfigObj.dbName);
         return successful;
     }
     function saveConfig(){
