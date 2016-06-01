@@ -3,4 +3,9 @@ conn-settings.js
 
 /node_modules/
 /package/
+
 /npm-debug.log
+
+*.idea
+dbaccess-config.json
+
