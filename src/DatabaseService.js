@@ -80,5 +80,42 @@ function DatabaseService(){
 function TableDAO(tableName){
     this.tabel = tableName;
 
+    function findById(id){
+        var obj;
+
+        return obj;
+
+    }
+    function findAll(){
+        var objects;
+
+        return objects;
+    }
+
+    function findAllByKeyValue(key, value){
+        var objects;
+
+        return objects;
+    }
+    function insertEntries(objects){
+        var successful = false;
+
+        return successful;
+    }
+    function insert(object){
+        var object;
+
+        return object;
+    }
+    function update(object){
+        var object;
+
+        return object;
+    }
+    function removeById(id){
+        var object;
+
+        return object;
+    }
 
 }

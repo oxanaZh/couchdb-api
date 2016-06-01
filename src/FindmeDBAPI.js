@@ -115,7 +115,7 @@ function FindmeDBAPI(){
         return successful;
     }
 
-    function findProfilesByEntry(entry, value){
+    function findProfilesByKeyValue(key, value){
         var profiles;
 
         return profiles;
