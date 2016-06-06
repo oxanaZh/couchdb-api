@@ -46,7 +46,12 @@ function DatabaseService(){
 
     function connect(){
         var successful = false;
-
+        $.ajax({
+            url: this.dbConfig.dbURL
+        }).then(function(data) {
+            $('.greeting-id').append(data.id);
+            $('.greeting-content').append(data.content);
+        });
         return successful;
     }
     function close(){
